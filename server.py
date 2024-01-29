@@ -1,7 +1,7 @@
-# backend/app.py
-
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import os
 from werkzeug.utils import secure_filename
 import subprocess
@@ -14,6 +14,8 @@ ALLOWED_EXTENSIONS = {'pdf'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "50 per hour", "4 per minute"])
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -24,6 +26,7 @@ def create_upload_folder():
 create_upload_folder()
 
 @app.route('/upload', methods=['POST'])
+@limiter.limit("1 per minute")
 def upload_file():
     create_upload_folder()
 
@@ -56,6 +59,7 @@ def upload_file():
     return jsonify({'error': 'Invalid file format'}), 400
 
 @app.route('/upload/remove', methods=['POST'])
+@limiter.limit("1 per minute")
 def upload_file_remove_ocr():
     create_upload_folder()
 
