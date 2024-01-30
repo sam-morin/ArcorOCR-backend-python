@@ -28,7 +28,7 @@ Here lives the backend for ArcorOCR.
 ### and runs with Gunicorn.
 
 There are two endpoints:
- - /upload (perform OCR generation of the supplied file in POST)
- - /upload/remove (perform OCR removal of the supplied file in POST)
+ - `/upload` (perform OCR generation of the supplied file in POST)
+ - `/upload/remove` (perform OCR removal of the supplied file in POST)
 
  Enjoy.
