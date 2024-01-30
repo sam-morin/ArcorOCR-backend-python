@@ -1,3 +1,5 @@
+![ArcorOCR](/pdf_128.png)
+
 # [ArcorOCR.com](https://arcorocr.com) Backend | OCR for the OCR-less
 
 Here lives the backend for ArcorOCR. 
