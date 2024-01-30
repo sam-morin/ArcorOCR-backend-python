@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://arcorocr.com" target="_blank">
-    <img src="/pdf_512.png" alt="Logo" width="290">
+    <img src="/pdf_512.png" alt="Logo" width="200">
   </a>
 
   <h1 align="center"><a href="https://arcorocr.com" target="_blank">ArcorOCR.com</a> | Backend</h1>
