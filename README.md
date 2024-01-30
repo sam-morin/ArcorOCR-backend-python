@@ -1,9 +1,9 @@
 <div align="center">
   <a href="https://arcorocr.com" target="_blank">
-    <img src="/pdf_512.png" alt="Logo" width="80" height="80">
+    <img src="/pdf_512.png" alt="Logo" width="140">
   </a>
 
-  <h3 align="center"><a href="https://arcorocr.com" target="_blank">ArcorOCR.com</a> | Backend</h3>
+  <h1 align="center"><a href="https://arcorocr.com" target="_blank">ArcorOCR.com</a> | Backend</h1>
 
   <p align="center">
     OCR for the OCR-less
@@ -18,8 +18,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
-
-# [ArcorOCR.com](https://arcorocr.com) Backend | OCR for the OCR-less
 
 Here lives the backend for ArcorOCR. 
 
