@@ -79,5 +79,5 @@ or, better yet..
 
 3. Run it with Gunicorn
 ```shell
-gunicorn -w 4 -b 0.0.0.0:5002 server:app --timeout 300
+gunicorn -w 4 -b 0.0.0.0:5000 server:app --timeout 300
 ```
