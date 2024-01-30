@@ -6,7 +6,7 @@
   <h1 align="center"><a href="https://arcorocr.com" target="_blank">ArcorOCR.com</a> | Backend</h1>
 
   <p align="center">
-    <h3>PDF OCR for the OCR-less</h3>
+    <h3>PDF OCR for the OCR-less | <a href="https://github.com/sam-morin/ArcorOCR-frontend">Frontend Repo</a></h3>
     <!-- <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
@@ -17,8 +17,6 @@
     <a href="https://github.com/sam-morin/ArcorOCR-backend-python/issues">Request Feature</a>
     .
     <a href="https://github.com/sam-morin/ArcorOCR-backend?tab=readme-ov-file#running">Build/Develop</a>
-    .
-    <a href="https://github.com/sam-morin/ArcorOCR-frontend">Frontend Repo</a>
   </p>
 </div>
 
