@@ -5,9 +5,9 @@
 
   <h1 align="center"><a href="https://arcorocr.com" target="_blank">ArcorOCR.com</a> | Backend</h1>
 
-  <p align="center">
+  <h3 align="center">
     OCR for the OCR-less
-    <br />
+    <!-- <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -15,8 +15,8 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
+  </h3>
 </div>
 
 Here lives the backend for ArcorOCR. 
