@@ -21,11 +21,13 @@
 
 Here lives the backend for ArcorOCR. 
 
-### It's Python,
 
-### uses OCRmyPDF,
+## It's Python,
 
-### and runs with Gunicorn.
+## uses OCRmyPDF,
+
+## and runs with Gunicorn.
+
 
 There are two endpoints:
  - `/upload` (perform OCR generation of the supplied file in POST)
