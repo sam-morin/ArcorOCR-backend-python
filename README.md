@@ -45,7 +45,7 @@ There are two endpoints:
 
 1. Pull and CD
 ```shell
-git pull https://github.com/sam-morin/ArcorOCR-backend-python.git && cd ArcorOCR-backend
+git clone https://github.com/sam-morin/ArcorOCR-backend-python.git && cd ArcorOCR-backend
 ```
 
 2. Build image
@@ -62,7 +62,7 @@ docker run -d --restart unless-stopped -p PUBLIC_PORT:5000 arcorocr-backend
 
 1. Pull and CD
 ```shell
-git pull https://github.com/sam-morin/ArcorOCR-backend-python.git && cd ArcorOCR-backend
+git clone https://github.com/sam-morin/ArcorOCR-backend-python.git && cd ArcorOCR-backend
 ```
 
 2. Install requirements.txt
