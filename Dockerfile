@@ -1,5 +1,5 @@
 # Use the official Ubuntu image as the base image
-FROM ubuntu:latest
+FROM alpine:latest
 
 # Set the working directory in the container
 WORKDIR /app
