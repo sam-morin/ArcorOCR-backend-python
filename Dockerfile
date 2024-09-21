@@ -1,20 +1,14 @@
-# Use the official Ubuntu image as the base image
+# Use the official Alpine image as the base image
 FROM alpine:latest
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Install Python and pip
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install Tesseract OCR and dependencies
-RUN apt-get update && \
-    apt-get install -y tesseract-ocr ghostscript && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Install Python, pip, and other dependencies
+RUN apk update && \
+    apk add --no-cache python3 py3-pip tesseract-ocr ghostscript && \
+    python3 -m ensurepip && \
+    pip3 install --no-cache --upgrade pip
 
 # Print Ghostscript version
 RUN gs --version
@@ -25,7 +19,7 @@ RUN pip3 install --no-cache-dir pytesseract
 # Copy the requirements file into the container at /app
 COPY requirements.txt .
 
-# Install any other dependencies
+# Install any other dependencies from requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the current directory contents into the container at /app
