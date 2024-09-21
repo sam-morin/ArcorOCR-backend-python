@@ -7,20 +7,19 @@ WORKDIR /app
 # Install Python, pip, and other dependencies
 RUN apk update && \
     apk add --no-cache python3 py3-pip tesseract-ocr ghostscript && \
-    python3 -m ensurepip && \
-    pip3 install --no-cache --upgrade pip
+    python3 -m venv /app/venv
 
-# Print Ghostscript version
-RUN gs --version
-
-# Install Tesseract OCR Python bindings
-RUN pip3 install --no-cache-dir pytesseract
+# Activate the virtual environment and install dependencies
+RUN source /app/venv/bin/activate && \
+    pip install --upgrade pip && \
+    pip install --no-cache-dir pytesseract
 
 # Copy the requirements file into the container at /app
 COPY requirements.txt .
 
-# Install any other dependencies from requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Install any other dependencies from requirements.txt inside the virtual environment
+RUN source /app/venv/bin/activate && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Copy the current directory contents into the container at /app
 COPY . /app
@@ -31,5 +30,5 @@ EXPOSE 5002
 # Define environment variable
 ENV FLASK_APP=server.py
 
-# Run Gunicorn with the app as the entry point
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "server:app", "--timeout", "300"]
+# Activate the virtual environment when running the application
+CMD ["/app/venv/bin/gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "server:app", "--timeout", "300"]
